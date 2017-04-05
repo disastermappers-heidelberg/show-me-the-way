@@ -156,7 +156,7 @@ function makeBbox(bounds_array) {
     );
 }
 
-var runSpeed = 2000;
+var runSpeed = 3500;
 
 osmStream.runFn(function(err, data) {
     queue = _.filter(data, function(f) {
@@ -180,7 +180,7 @@ osmStream.runFn(function(err, data) {
             (+new Date((b.neu && b.neu.timestamp) || (b.neu && b.neu.timestamp)));
     });
     // if (queue.length > 2000) queue = queue.slice(0, 2000);
-    runSpeed = 1500;
+    //runSpeed = 1500;
 }, null, null, bboxString);
 
 function doDrawWay() {
